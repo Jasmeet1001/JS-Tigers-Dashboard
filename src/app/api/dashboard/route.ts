@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { NextRequest, NextResponse } from "next/server";
 import clientPromise from "@/db/conn";
+import { AggregationResult } from "@/lib/types";
 
 export async function GET(req: NextRequest) {
   try {
@@ -29,9 +30,9 @@ export async function GET(req: NextRequest) {
        },
      ];
 
-     const [result] = await db
+     const [result]: AggregationResult[] = await db
        .collection("shipments")
-       .aggregate(pipeline)
+       .aggregate<AggregationResult>(pipeline)
        .toArray();
 
     return NextResponse.json({ result });
