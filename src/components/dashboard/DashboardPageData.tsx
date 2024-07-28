@@ -11,6 +11,7 @@ import {
   TodoList,
 } from "@/components/ui/icons/customicons";
 import { AggregationResult, DocumentResult } from "@/lib/types";
+import MapComponent from "../MapComponent";
 
 const DashboardPageData = () => {
   const [data, setData] = useState<AggregationResult | null>(null);
@@ -111,7 +112,8 @@ const DashboardPageData = () => {
         </div>
       </div>
 
-      <div id='map' className='mt-5'>
+      <MapComponent/>
+      {/* <div id='map' className='mt-5'>
         <iframe
           src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1627.5944820970687!2d77.35615213692951!3d28.52045568014162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce63fea905919%3A0xabddbeb5ef3a3947!2sPavilion%20Court!5e1!3m2!1sen!2sin!4v1721736946298!5m2!1sen!2sin'
           width='100%'
@@ -119,7 +121,7 @@ const DashboardPageData = () => {
           className='border-0 rounded-lg'
           allowFullScreen={false}
         ></iframe>
-      </div>
+      </div> */}
 
       <div
         id='chart-card'

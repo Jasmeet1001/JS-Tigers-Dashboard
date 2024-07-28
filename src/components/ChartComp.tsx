@@ -6,14 +6,14 @@ import { PieChartFull } from "./ui/piechartfull";
 
 const ChartDashboard = () => {
   return (
-    <div className='flex w-full flex-col'>
+    <div className='flex w-full flex-col md:flex-row'>
       <Tabs defaultValue='ships'>
         <div className='flex flex-col w-full'>
           <TabsList className='flex flex-col md:flex-row w-full'>
             <div className='flex justify-start items-center font-bold text-lg mb-4 md:mb-0 md:pe-8'>
               Pie Chart Analysis
             </div>
-            <div className='flex justify-center md:justify-end w-full gap-4'>
+            <div className='flex justify-center w-full gap-x-4'>
               <TabsTrigger value='ships'>
                 <ShipIcon />
                 Ships
@@ -28,21 +28,27 @@ const ChartDashboard = () => {
               </TabsTrigger>
             </div>
           </TabsList>
-          <TabsContent value='ships' className='flex flex-wrap gap-4 mt-4'>
+          <TabsContent value='ships' className='flex flex-wrap md:flex-nowrap'>
             <PieChartHollow />
             <PieChartHollow />
             <PieChartHollow />
             <PieChartHollow />
             <PieChartHollow />
           </TabsContent>
-          <TabsContent value='air' className='flex flex-wrap gap-4 mt-4'>
+          <TabsContent
+            value='air'
+            className='flex flex-wrap mt-4 md:flex-nowrap'
+          >
             <PieChartHollow />
             <PieChartHollow />
             <PieChartHollow />
             <PieChartHollow />
             <PieChartHollow />
           </TabsContent>
-          <TabsContent value='land' className='flex flex-wrap gap-4 mt-4'>
+          <TabsContent
+            value='land'
+            className='flex flex-wrap mt-4 md:flex-nowrap'
+          >
             <PieChartHollow />
             <PieChartHollow />
             <PieChartHollow />

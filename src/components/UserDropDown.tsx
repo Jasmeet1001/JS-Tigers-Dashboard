@@ -13,8 +13,8 @@ import { Arrow } from "./ui/icons/customicons";
 
 const UserDropDown = () => {
   return (
-    <div className='flex'>
-      <div className='mx-5'>
+    <div className='flex items-center gap-2 sm:gap-4'>
+      <div className='mx-2 sm:mx-5'>
         <Avatar>
           <AvatarImage src='https://github.com/shadcn.png' />
           <AvatarFallback>CN</AvatarFallback>
@@ -23,10 +23,10 @@ const UserDropDown = () => {
       <div>
         <DropdownMenu>
           <DropdownMenuTrigger>
-            <div className='flex gap-x-1 me-9'>
-              <div className='flex flex-col me-10 text-left'>
-                <span>John Smith</span>
-                <span className='text-xs'>Admin</span>
+            <div className='flex items-center gap-x-1'>
+              <div className='flex flex-col text-left'>
+                <span className='text-sm sm:text-base'>John Smith</span>
+                <span className='text-xs sm:text-sm'>Admin</span>
               </div>
               <div>
                 <Arrow />
